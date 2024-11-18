@@ -1,0 +1,202 @@
+/* Base Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.078);
+}
+.Login{
+    width: 70px;
+    height:45px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.Login button{
+    background-color: #fff;
+    height: 40px;
+    width: 70px;
+    font-weight: 600;
+    border-radius: 33%;
+    cursor: pointer;
+    transition: 0.5s;
+
+    
+
+}
+
+.Login button:hover{
+    opacity: 30%;
+    transform: scale(1.05);
+    font-weight: 600;
+    border-radius: 25%;   
+    cursor: pointer;
+
+    
+
+}
+
+
+/* Logo */
+.logo {
+    width: 140px;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Navigation Links */
+ul {
+    flex: 1;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-align: none;
+}
+a{
+    text-decoration: none;  
+    color: inherit; 
+}
+ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 5px 20px;
+    font-size: 18px;
+    color: #242424;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease, text-decoration 0.3s ease; /* Smooth transition */
+    
+}
+
+/* Hover effect */
+ul li:hover,
+ul li:active {
+    color: #FF9B42; /* Red color on hover */
+    transform: scale(1.1); /* Slight scale effect */
+    text-decoration: underline; /* Underline text on hover */
+}
+
+/* Toggle Icon */
+.toggle-icon {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Search Box */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px 15px;
+    border: 2px solid #000;
+    border-radius: 50px;
+    width: 300px;
+    height: 45px;
+    margin-right: 20px;
+}
+
+.search-box input {
+    padding: 8px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 16px;
+    flex: 1; /* Make input grow */
+}
+
+.search-box img {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        flex-wrap: wrap;
+        padding: 1rem;
+    }
+
+    .logo {
+        width: 130px;
+    }
+
+    ul {
+        flex: 1;
+        justify-content: center;
+    }
+
+    ul li {
+        margin: 8px 15px;
+        font-size: 16px;
+    }
+
+    .search-box {
+        width: 250px;
+    }
+}
+
+/* Max-width 768px */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 20%; /* Reduce logo size */
+    }
+
+    ul {
+        display: none; /* Hide navigation links */
+    }
+
+    .search-box {
+        flex: 1;
+        max-width: 60%; /* Wider search box for smaller screens */
+        margin: 0 10px;
+    }
+
+    .Login {
+        width: 15%;
+    }
+}
+
+/* Max-width 480px */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .logo {
+        width: 15%;
+    }
+
+    .search-box {
+        height: 36px;
+        width: 45%;
+    }
+
+    .search-box input {
+        font-size: 14px;
+    }
+
+    .Login {
+        width: 15%;
+    }
+}
